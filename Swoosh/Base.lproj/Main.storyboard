@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-274" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="UHX-Mg-0wm">
             <objects>
-                <viewController id="04h-hu-QEB" sceneMemberID="viewController">
+                <viewController id="04h-hu-QEB" customClass="LeagueVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Znu-1V-giD"/>
                         <viewControllerLayoutGuide type="bottom" id="SJJ-Vy-UqL"/>
@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="485.50724637681162" y="107.60869565217392"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="YdR-nv-z9z">
             <objects>
-                <viewController id="248-gc-IyE" sceneMemberID="viewController">
+                <viewController id="248-gc-IyE" customClass="SkillVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YMw-JE-4Sq"/>
                         <viewControllerLayoutGuide type="bottom" id="rOq-bi-dWS"/>
@@ -296,7 +296,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="r9D-tt-7fg" kind="unwind" unwindAction="unwindViewControllerWithSegue:" id="g00-lg-Baj"/>
+                                    <action selector="unwindToLeague:" destination="248-gc-IyE" eventType="touchUpInside" id="bKL-0D-ZF6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -316,11 +316,13 @@
                             <constraint firstItem="Zc1-yn-Cag" firstAttribute="top" secondItem="YMw-JE-4Sq" secondAttribute="bottom" constant="20" id="uxQ-lc-Mrc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="04h-hu-QEB" kind="show" identifier="league" id="9xb-sk-XOP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZ1-SN-FhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="r9D-tt-7fg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1227.536231884058" y="107.60869565217392"/>
+            <point key="canvasLocation" x="1233" y="109"/>
         </scene>
     </scenes>
     <resources>
@@ -330,4 +332,7 @@
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9xb-sk-XOP"/>
+    </inferredMetricsTieBreakers>
 </document>
