@@ -146,7 +146,7 @@
                                     <constraint firstAttribute="width" constant="250" id="I5U-Cg-5DU"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-lp-5PM" customClass="Border_Button" customModule="Swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-lp-5PM" customClass="Border_Button" customModule="Swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="650" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.0052053689719999997" green="0.0052374156700000004" blue="0.0053230246109999997" alpha="0.50002750880000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -170,6 +170,9 @@
                                         <state key="normal" title="Men">
                                             <color key="titleColor" red="0.97789684480000005" green="0.98391723740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMenTapped:" destination="04h-hu-QEB" eventType="touchUpInside" id="kdT-7K-2Jg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ3-1d-U8c" customClass="Border_Button" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56.000000000000028" width="374" height="36"/>
@@ -178,6 +181,9 @@
                                         <state key="normal" title="Women">
                                             <color key="titleColor" red="0.97789684480000005" green="0.98391723740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomenTapped:" destination="04h-hu-QEB" eventType="touchUpInside" id="B8g-Pa-H3C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-EM-Q8t" customClass="Border_Button" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="112.00000000000003" width="374" height="36"/>
@@ -186,6 +192,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.97789684480000005" green="0.98391723740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="04h-hu-QEB" eventType="touchUpInside" id="534-eI-MPe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -214,6 +223,9 @@
                             <constraint firstItem="L6q-Kx-Fnr" firstAttribute="leading" secondItem="KAC-Yr-9Xn" secondAttribute="leading" id="wlU-L5-Hvu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="onNextTapped" destination="lk1-lp-5PM" id="7xJ-2n-2ja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODd-1N-CeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UX0-Os-n5h" userLabel="Exit" sceneMemberID="exit"/>
